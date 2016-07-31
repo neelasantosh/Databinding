@@ -1,0 +1,13 @@
+D:\Windows Phone Projects\WindowsPhoneDataBinding\Bin\Debug\ApplicationIcon.png
+D:\Windows Phone Projects\WindowsPhoneDataBinding\Bin\Debug\Background.png
+D:\Windows Phone Projects\WindowsPhoneDataBinding\Bin\Debug\WindowsPhoneDataBinding.dll
+D:\Windows Phone Projects\WindowsPhoneDataBinding\Bin\Debug\WindowsPhoneDataBinding.pdb
+D:\Windows Phone Projects\WindowsPhoneDataBinding\Bin\Debug\AppManifest.xaml
+D:\Windows Phone Projects\WindowsPhoneDataBinding\Bin\Debug\WindowsPhoneDataBinding.xap
+D:\Windows Phone Projects\WindowsPhoneDataBinding\obj\Debug\App.g.i.cs
+D:\Windows Phone Projects\WindowsPhoneDataBinding\obj\Debug\MainPage.g.i.cs
+D:\Windows Phone Projects\WindowsPhoneDataBinding\obj\Debug\WindowsPhoneDataBinding.g.resources
+D:\Windows Phone Projects\WindowsPhoneDataBinding\obj\Debug\WindowsPhoneDataBinding.dll
+D:\Windows Phone Projects\WindowsPhoneDataBinding\obj\Debug\WindowsPhoneDataBinding.pdb
+D:\Windows Phone Projects\WindowsPhoneDataBinding\obj\Debug\XapCacheFile.xml
+D:\Windows Phone Projects\WindowsPhoneDataBinding\obj\Debug\ProductDetailsPage.g.i.cs

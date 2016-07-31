@@ -1,0 +1,77 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WindowsPhoneDataBinding.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+     
+    <StackPanel VerticalAlignment="Center">
+        <Button Content="Get Products" Name="GetProductsButton"
+                Click="GetProductsButton_Click"/>
+        <Button Content="Add Product" Name="AddProductButton"
+                Click="AddProductButton_Click"/>
+        <ListBox Name="ProductListBox"
+                 Height="550"
+                 Width="440"
+                 SelectionChanged="ProductListBox_SelectionChanged">
+            <!-- Item Template is one time design-->
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+                            <TextBlock Width="200" TextWrapping="Wrap" 
+                                       FontSize="30"
+                                       Text="{Binding productName}"/>
+                            <TextBlock Width="200" TextWrapping="Wrap" 
+                                       FontSize="25"
+                                       Text="{Binding productId}"/>
+                            <TextBlock Width="200" TextWrapping="Wrap" 
+                                       FontSize="20"
+                                       Text="{Binding productPrice}"/>
+                            <CheckBox Content="Status of product"
+                                      FontSize="25"
+                                      IsChecked="{Binding status, Mode=TwoWay}"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <Image Width="180"
+                                   Height="180"
+                                   Stretch="Fill">
+                                <Image.Source>
+                                    <!-- Used to get image from the server -->
+                                    <BitmapImage UriSource="{Binding productImage}"
+                                                 CreateOptions="BackgroundCreation" />
+                                </Image.Source>
+                            </Image>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+   
+    
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.book.list.png" 
+                                            Text="List Products"
+                                            Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.list.add.below.png" 
+                                            Text="Add Products"
+                                            Click="ApplicationBarIconButton_Click_1"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
